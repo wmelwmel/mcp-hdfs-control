@@ -82,7 +82,6 @@ async def main() -> None:
                     messages.append({"role": "assistant", "content": content})
                     break
 
-                # assistant message containing tool calls
                 messages.append({
                     "role": "assistant",
                     "content": msg.content or "",
@@ -110,7 +109,7 @@ async def main() -> None:
                     try:
                         # # args = sanitize_tool_args(fn, args)
                         # if needs_user_confirmation(fn, args):
-                        #     print("\n⚠️  Risky action requested:")
+                        #     print("\n!!!  Risky action requested:")
                         #     print(f"   tool: {fn}")
                         #     print(f"   args: {args}")
                         #     ans = input("Approve? (y/n) > ").strip().lower()
